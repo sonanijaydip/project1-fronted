@@ -5,6 +5,7 @@ import Login from './component/login'
 import Home from './component/Home'
 import Contact from './component/Contact'
 import About from './component/About'
+import Canvas from './component/Canvas';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path='/login' element={<Login/>} ></Route>
           <Route path='/contact' element={<Contact/>} ></Route>
           <Route path='/about' element={<About/>} ></Route>
+          <Route path='/offcanvas' element={<Canvas/>} ></Route>
         </Routes>
       </BrowserRouter>
     
