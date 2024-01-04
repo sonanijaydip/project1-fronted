@@ -1,76 +1,46 @@
 import React from 'react'
-import './login.css';
-import { Col, Container, Row } from 'react-bootstrap';
-import { Button, Card } from 'react-bootstrap';
+import '../component/css/login.css';
+import { Link } from 'react-router-dom';
 
 
 function Login() {
   return (
     <>
-      <Container>
-        <Row>
-          <Col className='box1 col-12 col-lg-4 col-sm-6'>
-            <Card style={{ width: '18rem' }}>
-              <Card.Img style={{height: '160px', backgroundSize: 'cover'}} variant="top" src={require(`../img/kane1.jpg`)} />
-              <Card.Body>
-                <Card.Title>Card Title</Card.Title>
-                <Card.Text>
-                  Some quick example text to build on the card title and make up the
-                  bulk of the card's content.
-                </Card.Text>
-                <Button variant="primary">Go somewhere</Button>
-              </Card.Body>
-            </Card>
-          </Col>
-
-          <Col className='box2 co-12 col-lg-4 col-sm-6'>
-          <Card style={{ width: '18rem' }}>
-              <Card.Img  variant="top" src={require(`../img/kane2.jpg`)} />
-              <Card.Body>
-                <Card.Title>Card Title</Card.Title>
-                <Card.Text>
-                  Some quick example text to build on the card title and make up the
-                  bulk of the card's content.
-                </Card.Text>
-                <Button variant="primary">Go somewhere</Button>
-              </Card.Body>
-            </Card>
-          </Col>
-
-          <Col className='box3 col-12 col-lg-4 col-sm-6'>
-          <Card style={{ width: '18rem' }}>
-              <Card.Img className='image1' variant="top" src={require(`../img/kane3.jpg`)} />
-              <Card.Body>
-                <Card.Title>Card Title</Card.Title>
-                <Card.Text>
-                  Some quick example text to build on the card title and make up the
-                  bulk of the card's content.
-                </Card.Text>
-                <Button variant="primary">Go somewhere</Button>
-              </Card.Body>
-            </Card>
-          </Col>
-
-          {/* <Col className='box3 '>
-          <Card style={{ width: '18rem' }}>
-              <Card.Img className='image1' variant="top" src={require(`../img/kane3.jpg`)} />
-              <Card.Body>
-                <Card.Title>Card Title</Card.Title>
-                <Card.Text>
-                  Some quick example text to build on the card title and make up the
-                  bulk of the card's content.
-                </Card.Text>
-                <Button variant="primary">Go somewhere</Button>
-              </Card.Body>
-            </Card>
-          </Col> */}
-        </Row>
-      </Container>
-
-
+ 
+    <div className="Auth-form-container">
+      <form className="Auth-form">
+        <div className="Auth-form-content">
+          <h3 className="Auth-form-title">Sign In</h3>
+          <div className="form-group mt-3">
+            <label>Email address</label>
+            <input
+              type="email"
+              className="form-control mt-1"
+              placeholder="Enter email"
+            />
+          </div>
+          <div className="form-group mt-3">
+            <label>Password</label>
+            <input
+              type="password"
+              className="form-control mt-1"
+              placeholder="Enter password"
+            />
+          </div>
+          <div className="d-grid gap-2 mt-3">
+            <button type="submit" className="btn btn-primary">
+              Submit
+            </button>
+          </div>
+          <p className='mt-3'><a href='#'><Link to="/">you don't have any account?</Link></a></p>
+          <p className="forgot-password text-right mt-2">
+             <a href="#"><Link to="/forget">Forgot password?</Link></a>
+          </p>
+        </div>
+      </form>
+    </div>
     </>
   );
 }
 
 export default Login
-
