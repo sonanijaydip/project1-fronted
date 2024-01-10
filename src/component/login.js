@@ -7,7 +7,7 @@ function Login() {
   return (
     <>
  
-    <div className="Auth-form-container">
+    <div className="Auth-form-container main">
       <form className="Auth-form">
         <div className="Auth-form-content">
           <h3 className="Auth-form-title">Sign In</h3>
@@ -28,9 +28,9 @@ function Login() {
             />
           </div>
           <div className="d-grid gap-2 mt-3">
-            <button type="submit" className="btn btn-primary">
-              Submit
-            </button>
+            {/* <button type="submit" className="btn btn-primary"> */}
+              <Link to="/addcourse" className='btn btn-primary'>Submit</Link>
+            {/* </button> */}
           </div>
           <p className='mt-3'><a href='#'><Link to="/">you don't have any account?</Link></a></p>
           <p className="forgot-password text-right mt-2">

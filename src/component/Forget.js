@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import '../component/css/forget.css'
+import { Link } from "react-router-dom";
 
 function Forget(){
 
@@ -22,7 +23,7 @@ console.log(authmode);
   
   return(
     <>
-    <div className="Auth-form-container">
+    <div className="Auth-form-container main">
     <div className="Auth-form">
     <div className="Auth-form-content">
       <h3 className="Auth-form-title">forget password</h3>
@@ -53,7 +54,7 @@ console.log(authmode);
 
     return(
       <>
-      <div className="Auth-form-container">
+      <div className="Auth-form-container main">
       <div className="Auth-form">
       <div className="Auth-form-content">
         <h3 className="Auth-form-title">change password</h3>
@@ -74,10 +75,10 @@ console.log(authmode);
           />
         </div>
     
-        <div className="d-grid gap-2 mt-3">
-          <button type="submit" className="btn btn-primary" onClick={changeAuthMode}>
-            Submit
-          </button>
+        <div className="d-grid gap-2 mt-3 btn">
+          {/* <button type="submit" className="btn btn-primary"> */}
+          <Link to="/login" className="btn btn-primary" >Submit</Link>
+          {/* </button> */}
         
         </div>
       </div>
@@ -88,11 +89,9 @@ console.log(authmode);
 
   }
 
-
-
   return(
       <>
-      <div className="Auth-form-container">
+      <div className="Auth-form-container main">
     <div className="Auth-form">
       <div className="Auth-form-content">
         <h3 className="Auth-form-title">Enter Otp</h3>
@@ -116,47 +115,5 @@ console.log(authmode);
       </>
   )
   }
-
-
-
-    // return(
-    //   <>
-    //   <div className="Auth-form-container">
-    //   <form className="Auth-form">
-    //   <div className="Auth-form-content">
-    //     <h3 className="Auth-form-title">change password</h3>
-    //     <div className="form-group mt-3">
-    //       <label>Enter new password</label>
-    //       <input
-    //         type="password"
-    //         className="form-control mt-1"
-    //         placeholder="enter password"
-    //       />
-    //     </div>
-    //     <div className="form-group mt-3">
-    //       <label>repeat password</label>
-    //       <input
-    //         type="password"
-    //         className="form-control mt-1"
-    //         placeholder="repeat password"
-    //       />
-    //     </div>
-    
-    //     <div className="d-grid gap-2 mt-3">
-    //       <button type="submit" className="btn btn-primary" onClick={changeAuthMode}>
-    //         Submit
-    //       </button>
-        
-    //     </div>
-    //   </div>
-    // </form>
-    // </div>
-    //   </>
-    // )
-
-  
-
-
-
 
 export default Forget

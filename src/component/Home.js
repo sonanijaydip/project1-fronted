@@ -9,18 +9,19 @@ import { Link } from 'react-router-dom';
 function Home() {
 
   return (
-    <div>
+    <div className='main'>
       <Container>
-        <Row className="vh-100 d-flex justify-content-center align-items-center">
+        <Row className="  vh-100 d-flex justify-content-center align-items-center">
           <Col md={8} lg={6} xs={12}>
-            <Card className="px-4">
+            <Card className=" px-4">
               <Card.Body>
-                <div className="mb-3 mt-md-4">
+                <div className="mb-3 mt-md-4 second-main">
                   {/* <h2 className="fw-bold mb-2 text-center text-uppercase ">
                     Logo
                   </h2> */}
                   <div className="mb-3">
-                    <Form>
+                    <Form className=''>
+                  <h1 className='text-center'>Register</h1>
                       <Form.Group className="mb-3" controlId="Name">
                         <Form.Label className="text-center">Name</Form.Label>
                         <Form.Control type="text" placeholder="Enter Name" />
@@ -52,11 +53,11 @@ function Home() {
                         controlId="formBasicCheckbox"
                       ></Form.Group>
                       <div className="d-grid">
-                        <Button variant="primary" type="submit">
-                          <Link to="/login">
+                        {/* <Button variant="primary" type="submit"> */}
+                          <Link to="/login" className='btn btn-primary'>
                           Create Account
                           </Link>
-                        </Button>
+                        {/* </Button> */}
                       </div>
                     </Form>
                     <div className="mt-3">
