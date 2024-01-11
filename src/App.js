@@ -1,12 +1,11 @@
 // import logo from './logo.svg';
 import './App.css';
 import { Route, Routes } from 'react-router-dom';
-import Login from './component/login'
-import Home from './component/Home'
-import Forget from './component/Forget'
-import Addcourse from './component/Add_course'
-
-
+import Login from './component/login';
+import Home from './component/Home';
+import Forget from './component/Forget';
+import Adminlte from './component/adminlte';
+import Course from './component/Course';
 
 function App() {
   return (
@@ -16,7 +15,8 @@ function App() {
           <Route path='/' element={<Home/>} ></Route>
           <Route path='/login' element={<Login/>} ></Route>
           <Route path='/forget' element={<Forget/>} ></Route>
-          <Route path='/addcourse' element={<Addcourse/>} ></Route>
+          <Route path='/adminpanel' element={<Adminlte/>} ></Route>
+          <Route path='/addcourse' element={<Course/>}></Route>
         
         </Routes>
       

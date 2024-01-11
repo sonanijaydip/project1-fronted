@@ -2,7 +2,6 @@ import React from 'react'
 import '../component/css/login.css';
 import { Link } from 'react-router-dom';
 
-
 function Login() {
   return (
     <>
@@ -29,7 +28,8 @@ function Login() {
           </div>
           <div className="d-grid gap-2 mt-3">
             {/* <button type="submit" className="btn btn-primary"> */}
-              <Link to="/addcourse" className='btn btn-primary'>Submit</Link>
+          
+              <Link to="/adminpanel" className='btn btn-primary'>Submit</Link>
             {/* </button> */}
           </div>
           <p className='mt-3'><a href='#'><Link to="/">you don't have any account?</Link></a></p>
