@@ -6,6 +6,7 @@ import Home from './component/Home';
 import Forget from './component/Forget';
 import Adminlte from './component/adminlte';
 import Course from './component/Course';
+import View from './component/View';
 
 function App() {
   return (
@@ -17,7 +18,8 @@ function App() {
           <Route path='/forget' element={<Forget/>} ></Route>
           <Route path='/adminpanel' element={<Adminlte/>} ></Route>
           <Route path='/addcourse' element={<Course/>}></Route>
-        
+          <Route path='/view' element={<View/>}></Route>
+          
         </Routes>
       
     </div>

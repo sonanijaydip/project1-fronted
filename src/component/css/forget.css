@@ -18,7 +18,7 @@
     border-radius: 8px;
     background-color: white;
   }
-  
+   
   .Auth-form-content {
     padding-left: 12%;
     padding-right: 12%;
@@ -40,6 +40,6 @@
   .btn{
     color: white;
   }
-  .main{
+  /* .main{
     background-color: rgb(1, 46, 46);
-}
+} */

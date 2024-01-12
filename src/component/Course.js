@@ -13,15 +13,22 @@ function Add_course(){
           <div className="form-group mt-3">
             <label>enter course name</label>
             <input
-              type="email"
+              type="string"
               className="form-control mt-1"
               placeholder="Enter course name"
             />
           </div>
+          <div className="form-group mt-3">
+            <label>course fee</label>
+            <input
+              type="integer"
+              className="form-control mt-1"
+              placeholder="enter fees"
+            />
+          </div>
           
           <div className="d-grid gap-2 mt-3">
-            {/* <button type="submit" className="btn btn-primary"> */}
-          
+
               <Link to="" className='btn btn-primary'>Submit</Link>
             {/* </button> */}
           </div>
