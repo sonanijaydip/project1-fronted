@@ -28,7 +28,7 @@ function Login() {
           </div>
           <div className="d-grid gap-2 mt-3">
   
-              <Link to="/adminpanel" className='btn btn-primary'>Submit</Link>
+              <Link to="/viewsidebar" className='btn btn-primary'>Submit</Link>
           </div>
           <p className='mt-3'><a href='#'><Link to="/">you don't have any account?</Link></a></p>
           <p className="forgot-password text-right mt-2">

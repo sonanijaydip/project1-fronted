@@ -1,11 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import './css/course.css'
+import Sidebar from "./Sidebar";
 
 function Add_course(){
     return(
         <>
-        
+        <Sidebar/>
     <div className="Auth-form-container main">
       <form className="Auth-form">
         <div className="Auth-form-content">

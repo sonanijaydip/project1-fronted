@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import './css/viewcourse.css';
 
 function view_course(){
@@ -7,7 +7,7 @@ function view_course(){
         <>
          <h1 align="center">view course</h1>
 
-            <table width="90%" align="center">
+            <table width="100%" align="center" border="1px">
               <thead>  
                 <tr>
                     <th>course name</th>
