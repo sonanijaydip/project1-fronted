@@ -8,7 +8,7 @@ import { BsCircle } from "react-icons/bs";
 import { MdOutlineKeyboardArrowLeft } from "react-icons/md";
 import { HiTable } from "react-icons/hi";
 import { Link } from 'react-router-dom';
-import Dashboard from './Dashboard';
+// import Dashboard from './Dashboard';
 
 const Sidebar = () => {
 
@@ -21,7 +21,7 @@ const Sidebar = () => {
 
   return (
     <>
-    <Dashboard/>
+    {/* <Dashboard/> */}
       <div className='sidebar_scroll '>
         <ul className='bgcolorsidebar list-unstyled'>
           {/* ------------Logo-------------- */}
@@ -47,7 +47,6 @@ const Sidebar = () => {
           </li>
           {/* ------------Dashboard------------- */}
 
-
           <li>
             <Button
               onClick={() => setOpen(!open)}
@@ -58,7 +57,7 @@ const Sidebar = () => {
             </Button>
             <Collapse in={open}>
               <ul id='example-collapse-text' className='list-unstyled ps-0 text-start'>
-                <li><Link to='Dashboard_1'><BsCircle className='me-3 fs-6'></BsCircle>Dashboard v1</Link></li>
+                <li><Link to='/'><BsCircle className='me-3 fs-6'></BsCircle>Dashboard v1</Link></li>
                 <li><Link to='Dashboard_2'><BsCircle className='me-3 fs-6'></BsCircle>Dashboard v2</Link></li>
                 <li><Link to='Dashboard_3'><BsCircle className='me-3 fs-6'></BsCircle>Dashboard v3</Link></li>
               </ul>

@@ -4,17 +4,25 @@ import './css/dashboard.css'
 
 import { Button } from 'react-bootstrap'
 import Sidebar from './Sidebar';
+import { Link } from 'react-router-dom';
 // import Header from './Header';
-
 
 const Dashboard = () => {
     return (
         <>  
         <Sidebar/>
-        <div className='dashcol'>
-            <div className='d-flex dashpad space m-3'>
-                <h4>Dashboard</h4>
-                <p>home / Dashboard v1</p>
+        
+        <div className='dashcol bg-white'>
+            <div className='d-flex dashpad space m-2'>
+                <div>
+                    <h4>Dashboard</h4>
+                </div>
+                <div className='ms-auto pe-3'>
+                    <Link className='ps-3 btn btn-primary text-white' to="/login">Log in</Link>
+                </div>
+                <div>    
+                    <Link className='ps-3 btn btn-primary text-white' to="/signup">Sign Up</Link>
+                </div>
             </div>
             <div className='dashpad d-flex gap-3 pr-2 m-3 '>
                 <Card style={{ width: '14.5rem' }}  className='cardcol1 cardtxtcol'>
@@ -63,6 +71,7 @@ const Dashboard = () => {
                 </Card>
             </div>
             </div>
+         
 
         </>
     )

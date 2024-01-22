@@ -8,20 +8,22 @@ import Course from './component/Course';
 import View from './component/View';
 import Dashboard from './component/Dashboard';
 import Sidebar from './component/Sidebar';
+import Axiosbar from './component/Axiosbar';
 
 function App() {
   return (
     <div className="App main">
       
         <Routes>
-          <Route path='/' element={<Home/>} ></Route>
+          <Route path='/signup' element={<Home/>} ></Route>
           <Route path='/login' element={<Login/>} ></Route>
           <Route path='/forget' element={<Forget/>} ></Route>
           {/* <Route path='/adminpanel' element={<Adminlte/>} ></Route> */}
           <Route path='/addcourse' element={<Course/>}></Route>
           <Route path='/view' element={<View/>}></Route>
-          <Route path='/viewDashboard' element={<Dashboard/>}></Route>
-          <Route path='/viewsidebar' element={<Sidebar/>}></Route>
+          <Route path='/' element={<Dashboard/>}></Route>
+          <Route path='/' element={<Sidebar/>}></Route> 
+          <Route path='/axios' element={<Axiosbar/>}></Route>
 
         </Routes>
       
