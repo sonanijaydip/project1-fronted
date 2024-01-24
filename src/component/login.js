@@ -30,7 +30,7 @@ function Login() {
   
               <Link to="/viewsidebar" className='btn btn-primary'>Submit</Link>
           </div>
-          <p className='mt-3'><a href='#'><Link to="/">you don't have any account?</Link></a></p>
+          <p className='mt-3'><a href='#'><Link to="/signup">you don't have any account?</Link></a></p>
           <p className="forgot-password text-right mt-2">
              <a href="#"><Link to="/forget">Forgot password?</Link></a>
           </p>

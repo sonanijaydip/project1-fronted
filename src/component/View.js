@@ -5,7 +5,8 @@ import './css/viewcourse.css';
 function view_course(){
     return(
         <>
-         <h1 align="center">view course</h1>
+        <div className="bg-white">
+         <h1 align="center" >view course</h1>
 
             <table width="100%" align="center" border="1px">
               <thead>  
@@ -22,6 +23,7 @@ function view_course(){
                 </tr>
                 </tbody>
             </table>
+            </div>
 
         </>
     )

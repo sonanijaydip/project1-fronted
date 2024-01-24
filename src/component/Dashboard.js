@@ -10,10 +10,10 @@ import { Link } from 'react-router-dom';
 const Dashboard = () => {
     return (
         <>  
+      <div className='bg-white'>  
         <Sidebar/>
-        
-        <div className='dashcol bg-white'>
-            <div className='d-flex dashpad space m-2'>
+        <div className='dashcol'>
+            <div className='d-flex dashpad space m-3'>
                 <div>
                     <h4>Dashboard</h4>
                 </div>
@@ -69,6 +69,7 @@ const Dashboard = () => {
                         
                     </Card.Body>
                 </Card>
+            </div>
             </div>
             </div>
          

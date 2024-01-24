@@ -26,11 +26,11 @@ const Sidebar = () => {
         <ul className='bgcolorsidebar list-unstyled'>
           {/* ------------Logo-------------- */}
           <li className='border-bottom pt-2 pb-2'>
-            <img src={require('../img/AdminLTELogo.png')} width='30px' /><span> <Link to='/dashboard'>AdminLTE 3</Link></span>
+            <img src={require('../img/AdminLTELogo.png')} width='30px' /><span> <Link to='/'>AdminLTE 3</Link></span>
           </li>
           {/* ------------Logo 2------------- */}
           <li className='border-bottom pt-3 pb-3'>
-            <img className='rounded-circle' src={require('../img/user2.jpg')} width='30px' /><span>Alexander Pierce</span>
+          <Link to="/"><img className='rounded-circle' src={require('../img/user2.jpg')} width='30px' /><span>Alexander Pierce</span></Link>
           </li>
           {/* ------------search------------- */}
           <li className='p-2'>
