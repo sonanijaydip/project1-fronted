@@ -14,7 +14,7 @@ let [password, setpassword] = useState('');
 let [confirmPassword, setconfirmPassword] = useState('');
 
 const btnhandler=() => {
-  axios.post('http://localhost:5000/signup',{
+  axios.post('http://localhost:5000/register',{
     name : name,
     email : email,
     password: password,
@@ -42,9 +42,6 @@ const btnhandler=() => {
             <Card className=" px-4">
               <Card.Body>
                 <div className="mb-3 mt-md-4 second-main">
-                  {/* <h2 className="fw-bold mb-2 text-center text-uppercase ">
-                    Logo
-                  </h2> */}
                   <div className="mb-3">
                     <div className=''>
                   <h1 className='text-center'>Register</h1>
@@ -80,9 +77,9 @@ const btnhandler=() => {
                       ></Form.Group>
                       <div className="d-grid">
                         {/* <Button variant="primary" type="submit"> */}
-                          <div className='btn btn-primary' onClick={btnhandler()}>
+                          <Link className='btn btn-primary' onClick={btnhandler}>
                           Create Account
-                          </div>
+                          </Link>
                         {/* </Button> */}
                       </div>
                     </div>
