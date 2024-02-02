@@ -2,11 +2,15 @@ import React, { useState } from 'react'
 import '../component/css/login.css';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 function Login() {
 
+  const navigate = useNavigate(' ')
+
 let [email, setemail] = useState('');
 let [password, setpassword] = useState('');
+let [error, setError] = useState('');
 
 const btnhandler=() => {
   axios.post('http://localhost:5000/login',{
@@ -15,18 +19,37 @@ const btnhandler=() => {
   })
   
   .then(function (response) {
-    // handle success
-    console.log(response);
+    console.log(response.data);
+
+    if(response.data.status === "success")
+    {
+      // setPath(true)
+      // localStorage.setItem("token",response.data.token);
+      navigate("/");
+    }
+
+    // else{
+    //   setError(response.data.status);
+    //   alert("please fill the data ")
+    // }
+    if(response.data.status === "Check Your Email")
+    {
+      setError(response.data.status);
+      alert("check your password")
+    }
+    if(response.data.status === "Check Your Password")
+    {
+      setError(response.data.status);
+      alert("check your password")
+    }
+    if(response.data.status === "user already registered")
+    {
+      alert("please fill the data ")
+    }
   })
   .catch(function (error) {
-    // handle error
     console.log(error);
   })
-  .finally(function () {  
-    // always executed
-  });
-
-
 }
 
   return (

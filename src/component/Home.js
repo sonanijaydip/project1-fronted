@@ -3,15 +3,19 @@ import { Col, Button, Row, Container, Card, Form } from 'react-bootstrap';
 import axios from 'axios';
 import '../component/css/Home.css'
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 // import { Link } from 'react-router-dom'
 
-function Home() {
 
-let [name, setname] = useState('')
-let [email, setemail] = useState('');
-let [password, setpassword] = useState('');
-let [confirmPassword, setconfirmPassword] = useState('');
+function Home() {
+  const navigate = useNavigate();
+
+let [name, setname] = useState(' ')
+let [email, setemail] = useState(' ');
+let [password, setpassword] = useState(' ');
+let [confirmPassword, setconfirmPassword] = useState(' ');
+let [error, setError] = useState(null);
 
 const btnhandler=() => {
   axios.post('http://localhost:5000/register',{
@@ -22,16 +26,40 @@ const btnhandler=() => {
   })
   
   .then(function (response) {
-    // handle success
-    console.log(response);
+    console.log(response.data);
+
+    if(response.data.status === "success")
+    {
+      // setPath(true)
+      // localStorage.setItem("token",response.data.token);
+      navigate("/login");
+    }
+    // else{
+    //   set(response.data.status);
+    // }
+
+    if(response.data.name === " ")
+    {
+      alert("please fill the data")
+    }
+    if(response.data.status === "Check Your Email")
+    {
+      setError(response.data.status);
+      alert("check your password")
+    }
+    if(response.data.status === "Check Your Password")
+    {
+      setError(response.data.status);
+      alert("check your password")
+    }
+    if(response.data.status === "user already registered")
+    {
+      alert("user already registered")
+    }
   })
   .catch(function (error) {
-    // handle error
     console.log(error);
   })
-  .finally(function () {
-    // always executed
-  });
 }
 
   return (
