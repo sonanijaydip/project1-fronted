@@ -1,9 +1,57 @@
-import React from "react";
+import {React, useState} from "react";
 import { Link } from "react-router-dom";
 import './css/course.css'
 import Sidebar from "./Sidebar";
+import axios from "axios";
+import { useNavigate } from 'react-router-dom';
+
+
 
 function Add_course(){
+
+  const navigate = useNavigate(' ')
+
+let [course, setcourse] = useState('');
+let [fees, setfees] = useState('');
+let [error, setError] = useState('');
+
+const btnhandler=() => {
+  axios.post('http://localhost:5000/course/addcourse',{
+    // course: c_name,
+    // fees: course_fee
+    c_name:course,
+    course_fee:fees
+  })
+  
+  .then(function (response) {
+    console.log(response.data);
+
+    if(response.data.status === "succesfully added")
+    {
+
+      navigate("/");
+    }
+
+    if(response.data.status === "Check Your Email")
+    {
+      setError(response.data.status);
+      alert("check your password")
+    }
+    // if(response.data.status === "Check Your Password")
+    // {
+    //   setError(response.data.status);
+    //   alert("check your password")
+    // }
+    // if(response.data.status === "user already registered")
+    // {
+    //   alert("please fill the data ")
+    // }
+  })
+  .catch(function (error) {
+    console.log(error);
+  })
+}
+
     return(
         <>
         <Sidebar/>
@@ -17,6 +65,7 @@ function Add_course(){
               type="string"
               className="form-control mt-1"
               placeholder="Enter course name"
+              onChange={(e) => {setcourse(e.target.value)}}
             />
           </div>
           <div className="form-group mt-3">
@@ -25,12 +74,13 @@ function Add_course(){
               type="integer"
               className="form-control mt-1"
               placeholder="enter fees"
+              onChange={(e) => {setfees(e.target.value)}}
             />
           </div>
           
           <div className="d-grid gap-2 mt-3">
 
-              <Link to="" className='btn btn-primary'>Submit</Link>
+              <Link to="" className='btn btn-primary' onClick={btnhandler}>Submit</Link>
             {/* </button> */}
           </div>
         </div>

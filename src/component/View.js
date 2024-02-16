@@ -24,7 +24,6 @@ function view_course(){
                 </tbody>
             </table>
             </div>
-
         </>
     )
 }
