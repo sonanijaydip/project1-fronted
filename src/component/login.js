@@ -23,10 +23,8 @@ const btnhandler=() => {
 
     if(response.data.status === "success")
     {
-
-      navigate("/");
+      navigate("/Dashboard");
     }
-
     if(response.data.status === "Check Your Email")
     {
       setError(response.data.status);
@@ -73,7 +71,6 @@ const btnhandler=() => {
             />
           </div>
           <div className="d-grid gap-2 mt-3">
-  
               <div className='btn btn-primary' onClick={btnhandler} >Submit</div>
           </div>
           <p className='mt-3'><a href='#'><Link to="/signup">you don't have any account?</Link></a></p>

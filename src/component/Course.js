@@ -5,11 +5,9 @@ import Sidebar from "./Sidebar";
 import axios from "axios";
 import { useNavigate } from 'react-router-dom';
 
-
-
 function Add_course(){
 
-  const navigate = useNavigate(' ')
+const navigate = useNavigate(' ')
 
 let [course, setcourse] = useState('');
 let [fees, setfees] = useState('');
@@ -17,8 +15,7 @@ let [error, setError] = useState('');
 
 const btnhandler=() => {
   axios.post('http://localhost:5000/course/addcourse',{
-    // course: c_name,
-    // fees: course_fee
+
     c_name:course,
     course_fee:fees
   })
@@ -37,15 +34,7 @@ const btnhandler=() => {
       setError(response.data.status);
       alert("check your password")
     }
-    // if(response.data.status === "Check Your Password")
-    // {
-    //   setError(response.data.status);
-    //   alert("check your password")
-    // }
-    // if(response.data.status === "user already registered")
-    // {
-    //   alert("please fill the data ")
-    // }
+
   })
   .catch(function (error) {
     console.log(error);
@@ -80,7 +69,7 @@ const btnhandler=() => {
           
           <div className="d-grid gap-2 mt-3">
 
-              <Link to="" className='btn btn-primary' onClick={btnhandler}>Submit</Link>
+              <Link to="/Dashboard" className='btn btn-primary' onClick={btnhandler}>Submit</Link>
             {/* </button> */}
           </div>
         </div>

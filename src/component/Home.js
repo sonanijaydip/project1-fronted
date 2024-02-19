@@ -31,7 +31,7 @@ const btnhandler=() => {
     {
       // setPath(true)
       // localStorage.setItem("token",response.data.token);
-      navigate("/login");
+      navigate("/");
     }
     // else{
     //   set(response.data.status);

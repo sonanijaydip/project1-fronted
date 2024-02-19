@@ -18,7 +18,7 @@ const Dashboard = () => {
                     <h4>Dashboard</h4>
                 </div>
                 <div className='ms-auto pe-3'>
-                    <Link className='ps-3 btn btn-primary text-white' to="/login">Log in</Link>
+                    <Link className='ps-3 btn btn-primary text-white' to="/">Log in</Link>
                 </div>
                 <div>    
                     <Link className='ps-3 btn btn-primary text-white' to="/signup">Sign Up</Link>
@@ -73,7 +73,6 @@ const Dashboard = () => {
             </div>
             </div>
          
-
         </>
     )
 }

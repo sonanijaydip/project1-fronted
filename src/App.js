@@ -8,7 +8,6 @@ import Course from './component/Course';
 import View from './component/View';
 import Dashboard from './component/Dashboard';
 import Sidebar from './component/Sidebar';
-import Axiosbar from './component/Axiosbar';
 
 function App() {
   return (
@@ -16,14 +15,12 @@ function App() {
       
         <Routes>
           <Route path='/signup' element={<Home/>} ></Route>
-          <Route path='/login' element={<Login/>} ></Route>
+          <Route path='/' element={<Login/>} ></Route>
           <Route path='/forget' element={<Forget/>} ></Route>
-          {/* <Route path='/adminpanel' element={<Adminlte/>} ></Route> */}
           <Route path='/addcourse' element={<Course/>}></Route>
           <Route path='/view' element={<View/>}></Route>
-          <Route path='/' element={<Dashboard/>}></Route>
-          <Route path='/' element={<Sidebar/>}></Route> 
-          <Route path='/axios' element={<Axiosbar/>}></Route>
+          <Route path='/Dashboard' element={<Dashboard/>}></Route>
+          <Route path='/Sidebar' element={<Sidebar/>}></Route> 
 
         </Routes>
       

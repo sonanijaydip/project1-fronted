@@ -1,14 +1,15 @@
-import React from "react";
+import {React, useState} from "react";
 // import { Link } from "react-router-dom";
 import './css/viewcourse.css';
 
 function view_course(){
+
     return(
         <>
         <div className="bg-white">
          <h1 align="center" >view course</h1>
 
-            <table width="100%" align="center" border="1px">
+            <table width="100%" align="center" border="1">
               <thead>  
                 <tr>
                     <th>course name</th>
